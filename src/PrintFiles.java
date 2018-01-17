@@ -21,4 +21,9 @@ public class PrintFiles
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
         return super.postVisitDirectory(dir, exc);
     }
+
+    @Override
+    public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+        return super.visitFileFailed(file, exc);
+    }
 }
